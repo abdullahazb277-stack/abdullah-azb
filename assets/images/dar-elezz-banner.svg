@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="darBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1723"/>
+      <stop offset="100%" stop-color="#162233"/>
+    </linearGradient>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4DA3FF"/>
+      <stop offset="50%" stop-color="#00D1B2"/>
+      <stop offset="100%" stop-color="#4DA3FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="450" rx="16" fill="url(#darBg)" stroke="#283443" stroke-width="2"/>
+
+  <!-- Technical Background Grid -->
+  <g stroke="#1C2736" stroke-width="1" stroke-dasharray="6,6">
+    <line x1="50" y1="80" x2="850" y2="80"/>
+    <line x1="50" y1="220" x2="850" y2="220"/>
+    <line x1="50" y1="360" x2="850" y2="360"/>
+    <line x1="450" y1="40" x2="450" y2="410"/>
+  </g>
+
+  <!-- Brand Callout Header -->
+  <g transform="translate(60, 40)">
+    <rect width="130" height="26" rx="4" fill="#00D1B2" fill-opacity="0.15" stroke="#00D1B2" stroke-width="1"/>
+    <text x="65" y="17" fill="#00D1B2" font-family="monospace" font-size="11" font-weight="700" text-anchor="middle">DAR ELEZZ MAM</text>
+    <text x="0" y="55" fill="#F5F7FA" font-family="system-ui, sans-serif" font-size="24" font-weight="800">Industrial Support Systems &amp; Fasteners</text>
+    <text x="0" y="78" fill="#A7B0BE" font-family="system-ui, sans-serif" font-size="13">B2B Technical Solutions • MEP Pipe Hangers • Strut Support Frameworks</text>
+  </g>
+
+  <!-- Left: Interactive Technical Illustrations of Core Fasteners -->
+  <g transform="translate(60, 160)">
+    <!-- Item 1: Strut Channel & Beam Clamp -->
+    <rect width="230" height="100" rx="8" fill="#111821" stroke="#283443" stroke-width="1.5"/>
+    <text x="16" y="28" fill="#4DA3FF" font-family="system-ui" font-size="13" font-weight="700">Strut Channels &amp; Beam Clamps</text>
+    <!-- Strut cross section icon -->
+    <path d="M 20 50 L 50 50 L 50 80 L 20 80 L 20 72 L 40 72 L 40 58 L 20 58 Z" fill="#283443" stroke="#4DA3FF" stroke-width="1.5"/>
+    <text x="65" y="60" fill="#F5F7FA" font-family="system-ui" font-size="11">Slotted / Solid C-Channel</text>
+    <text x="65" y="76" fill="#A7B0BE" font-family="monospace" font-size="10">Heavy-Duty Steel Profiles</text>
+
+    <!-- Item 2: Clevis & Sprinkler Hangers -->
+    <rect y="115" width="230" height="100" rx="8" fill="#111821" stroke="#283443" stroke-width="1.5"/>
+    <text x="16" y="143" fill="#00D1B2" font-family="system-ui" font-size="13" font-weight="700">Clevis &amp; Sprinkler Hangers</text>
+    <!-- Clevis loop icon -->
+    <path d="M 25 165 C 25 195, 55 195, 55 165 L 48 165 C 48 188, 32 188, 32 165 Z" fill="#00D1B2"/>
+    <circle cx="40" cy="155" r="3" fill="#4DA3FF"/>
+    <text x="65" y="175" fill="#F5F7FA" font-family="system-ui" font-size="11">Adjustable Swivel &amp; Clevis</text>
+    <text x="65" y="191" fill="#A7B0BE" font-family="monospace" font-size="10">NFPA / UL MEP Standards</text>
+  </g>
+
+  <!-- Center-Right: Core Products & B2B Technical Marketing Focus -->
+  <g transform="translate(320, 160)">
+    <rect width="250" height="215" rx="8" fill="#111821" stroke="#283443" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#F5F7FA" font-family="system-ui" font-size="14" font-weight="700">U-Bolts &amp; Riser Clamps</text>
+    
+    <!-- U-bolt schematic -->
+    <g transform="translate(20, 48)">
+      <path d="M 20 10 L 20 60 A 25 25 0 0 0 70 60 L 70 10" fill="none" stroke="#4DA3FF" stroke-width="4" stroke-linecap="round"/>
+      <rect x="14" y="15" width="12" height="6" fill="#00D1B2"/>
+      <rect x="64" y="15" width="12" height="6" fill="#00D1B2"/>
+      <!-- Pipe inside -->
+      <circle cx="45" cy="55" r="18" fill="#1F2E40" stroke="#00D1B2" stroke-width="1.5" stroke-dasharray="2,2"/>
+    </g>
+
+    <text x="110" y="65" fill="#F5F7FA" font-family="system-ui" font-size="12">Threaded Rods &amp; Studs</text>
+    <text x="110" y="82" fill="#A7B0BE" font-family="monospace" font-size="10">High-Tensile Zinc Plated</text>
+    <text x="110" y="105" fill="#F5F7FA" font-family="system-ui" font-size="12">Rubber Lined Hangers</text>
+    <text x="110" y="122" fill="#A7B0BE" font-family="monospace" font-size="10">Acoustic &amp; Vibration Damp</text>
+    <text x="110" y="145" fill="#F5F7FA" font-family="system-ui" font-size="12">Bolts, Nuts &amp; Washers</text>
+    <text x="110" y="162" fill="#A7B0BE" font-family="monospace" font-size="10">Grade 8.8 / Stainless Steel</text>
+  </g>
+
+  <!-- Right: Value Proposition / Multidisciplinary Bridge -->
+  <g transform="translate(600, 160)">
+    <rect width="240" height="215" rx="8" fill="#151E29" stroke="#00D1B2" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#00D1B2" font-family="system-ui" font-size="13" font-weight="700">TECHNICAL B2B IMPACT</text>
+    
+    <g transform="translate(20, 52)">
+      <text x="0" y="12" fill="#F5F7FA" font-family="system-ui" font-size="12" font-weight="600">• Bilingual Copywriting</text>
+      <text x="12" y="28" fill="#A7B0BE" font-family="monospace" font-size="10">Arabic &amp; English MEP Catalogs</text>
+      
+      <text x="0" y="52" fill="#F5F7FA" font-family="system-ui" font-size="12" font-weight="600">• Contractor Audience</text>
+      <text x="12" y="68" fill="#A7B0BE" font-family="monospace" font-size="10">Engineers, MEP Consultancies</text>
+
+      <text x="0" y="92" fill="#F5F7FA" font-family="system-ui" font-size="12" font-weight="600">• Technical SEO &amp; Profile</text>
+      <text x="12" y="108" fill="#A7B0BE" font-family="monospace" font-size="10">Search Optimization &amp; LinkedIn</text>
+
+      <text x="0" y="132" fill="#4DA3FF" font-family="system-ui" font-size="11" font-weight="600">Official Portal:</text>
+      <text x="0" y="148" fill="#00D1B2" font-family="monospace" font-size="11">darelezz-mam.com</text>
+    </g>
+  </g>
+
+  <!-- Footer Tag -->
+  <text x="60" y="420" fill="#7D8590" font-family="monospace" font-size="11">BUSINESS &amp; INDUSTRIAL COLLABORATION — DAR ELEZZ MAM</text>
+</svg>

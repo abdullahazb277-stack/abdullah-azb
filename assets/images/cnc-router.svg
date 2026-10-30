@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cncBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1624"/>
+      <stop offset="100%" stop-color="#152132"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" rx="16" fill="url(#cncBg)" stroke="#283443" stroke-width="2"/>
+
+  <!-- Header -->
+  <text x="50" y="42" fill="#00D1B2" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">MECHANICAL DESIGN &amp; AUTOMATED MANUFACTURING</text>
+  <text x="50" y="70" fill="#F5F7FA" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700">CNC Router Machine &amp; Multi-Axis Motion</text>
+  <text x="50" y="92" fill="#A7B0BE" font-family="system-ui, -apple-system, sans-serif" font-size="13">Gantry Structural Mechanics, Stepper Actuation, Lead Screw Motion, and G-Code Execution</text>
+
+  <!-- Left: Motion & Control Specs -->
+  <g transform="translate(50, 125)">
+    <rect width="270" height="280" rx="10" fill="#111821" stroke="#283443" stroke-width="1.5"/>
+    <rect width="270" height="32" rx="10" fill="#192536"/>
+    <text x="20" y="22" fill="#00D1B2" font-family="system-ui" font-size="12" font-weight="700">SUB-SYSTEM SPECIFICATIONS</text>
+
+    <!-- Spec 1 -->
+    <g transform="translate(20, 48)">
+      <text x="0" y="14" fill="#4DA3FF" font-family="system-ui" font-size="12" font-weight="600">3-Axis Cartesian Motion (X, Y, Z)</text>
+      <text x="0" y="32" fill="#A7B0BE" font-family="monospace" font-size="10">High-torque NEMA Stepper Motors</text>
+      <text x="0" y="48" fill="#A7B0BE" font-family="monospace" font-size="10">Linear Rails &amp; Anti-Backlash Lead Screws</text>
+    </g>
+
+    <!-- Spec 2 -->
+    <g transform="translate(20, 118)">
+      <text x="0" y="14" fill="#00D1B2" font-family="system-ui" font-size="12" font-weight="600">Spindle &amp; Machining Toolhead</text>
+      <text x="0" y="32" fill="#A7B0BE" font-family="monospace" font-size="10">High-Speed Rotary Spindle</text>
+      <text x="0" y="48" fill="#A7B0BE" font-family="monospace" font-size="10">Precision Collet &amp; Milling Bit Alignment</text>
+    </g>
+
+    <!-- Spec 3 -->
+    <g transform="translate(20, 188)">
+      <text x="0" y="14" fill="#F5F7FA" font-family="system-ui" font-size="12" font-weight="600">Motion Control &amp; Software Interface</text>
+      <text x="0" y="32" fill="#A7B0BE" font-family="monospace" font-size="10">G-Code Command Interpretation</text>
+      <text x="0" y="48" fill="#A7B0BE" font-family="monospace" font-size="10">SolidWorks CAD &amp; CAM Toolpath Planning</text>
+    </g>
+  </g>
+
+  <!-- Right: 3D Isometric / Orthogonal Wireframe Illustration -->
+  <g transform="translate(360, 130)">
+    <!-- Base bed frame -->
+    <polygon points="40,220 280,220 350,150 110,150" fill="#151E29" stroke="#283443" stroke-width="2"/>
+    <!-- Grid slots on bed -->
+    <line x1="100" y1="220" x2="170" y2="150" stroke="#1F2E40" stroke-width="1.5"/>
+    <line x1="160" y1="220" x2="230" y2="150" stroke="#1F2E40" stroke-width="1.5"/>
+    <line x1="220" y1="220" x2="290" y2="150" stroke="#1F2E40" stroke-width="1.5"/>
+
+    <!-- Y-Axis Rails -->
+    <line x1="40" y1="220" x2="110" y2="150" stroke="#00D1B2" stroke-width="3"/>
+    <line x1="280" y1="220" x2="350" y2="150" stroke="#00D1B2" stroke-width="3"/>
+
+    <!-- Gantry Uprights & Crossbeam -->
+    <g transform="translate(80, 20)">
+      <!-- Left upright -->
+      <line x1="10" y1="170" x2="10" y2="40" stroke="#4DA3FF" stroke-width="6" stroke-linecap="round"/>
+      <!-- Right upright -->
+      <line x1="180" y1="120" x2="180" y2="-10" stroke="#4DA3FF" stroke-width="6" stroke-linecap="round"/>
+      <!-- X-Axis Crossbeam -->
+      <line x1="10" y1="40" x2="180" y2="-10" stroke="#4DA3FF" stroke-width="8" stroke-linecap="round"/>
+
+      <!-- Z-Axis Toolhead Carriage -->
+      <rect x="80" y="10" width="36" height="60" rx="4" fill="#00D1B2" stroke="#FFFFFF" stroke-width="1"/>
+      <!-- Spindle Motor cylinder -->
+      <rect x="88" y="55" width="20" height="40" rx="2" fill="#E2E8F0"/>
+      <!-- Milling Bit -->
+      <line x1="98" y1="95" x2="98" y2="120" stroke="#FFD166" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Axis Labels -->
+      <text x="140" y="25" fill="#4DA3FF" font-family="monospace" font-size="11" font-weight="700">X-Axis</text>
+      <text x="110" y="85" fill="#00D1B2" font-family="monospace" font-size="11" font-weight="700">Z-Axis</text>
+    </g>
+    <text x="290" y="195" fill="#00D1B2" font-family="monospace" font-size="11" font-weight="700">Y-Axis</text>
+  </g>
+
+  <!-- Footer Tag -->
+  <text x="50" y="450" fill="#7D8590" font-family="monospace" font-size="11">ACADEMIC MECHANICAL &amp; MECHATRONIC INTEGRATION STUDY — ABDULLAH AZB 2026</text>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="radarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B131E"/>
+      <stop offset="100%" stop-color="#111B29"/>
+    </linearGradient>
+    <radialGradient id="radarGlow" cx="50%" cy="100%" r="90%">
+      <stop offset="0%" stop-color="#00D1B2" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#00D1B2" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#00D1B2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="480" rx="16" fill="url(#radarBg)" stroke="#283443" stroke-width="2"/>
+
+  <!-- Header -->
+  <text x="50" y="42" fill="#00D1B2" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">EMBEDDED SENSING &amp; INSTRUMENTATION</text>
+  <text x="50" y="70" fill="#F5F7FA" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700">Arduino Ultrasonic Radar System</text>
+  <text x="50" y="92" fill="#A7B0BE" font-family="system-ui, -apple-system, sans-serif" font-size="13">180-Degree Spatial Scanning via SG90 Micro-Servo &amp; HC-SR04 Ultrasonic Ranging</text>
+
+  <!-- Left: Schematic Blocks -->
+  <g transform="translate(50, 120)">
+    <!-- Arduino Uno Block -->
+    <rect width="260" height="130" rx="10" fill="#151E29" stroke="#00D1B2" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#00D1B2" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Arduino Uno Microcontroller</text>
+    <text x="20" y="52" fill="#A7B0BE" font-family="monospace" font-size="11">• ATmega328P @ 16 MHz</text>
+    <text x="20" y="70" fill="#A7B0BE" font-family="monospace" font-size="11">• Trigger Pin: Pin 9 (10μs Pulse)</text>
+    <text x="20" y="88" fill="#A7B0BE" font-family="monospace" font-size="11">• Echo Pin: Pin 10 (PulseIn Duration)</text>
+    <text x="20" y="106" fill="#A7B0BE" font-family="monospace" font-size="11">• PWM Servo Output: Pin 11</text>
+
+    <!-- Components Block -->
+    <rect y="150" width="260" height="145" rx="10" fill="#151E29" stroke="#4DA3FF" stroke-width="1.5"/>
+    <text x="20" y="178" fill="#4DA3FF" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Scanning &amp; Sensor Assembly</text>
+    <text x="20" y="200" fill="#A7B0BE" font-family="monospace" font-size="11">• HC-SR04 Ultrasonic Transceiver</text>
+    <text x="20" y="218" fill="#A7B0BE" font-family="monospace" font-size="11">• 40 kHz Sound Burst Transmission</text>
+    <text x="20" y="236" fill="#A7B0BE" font-family="monospace" font-size="11">• SG90 9g Mini Servo Motor (0° - 180°)</text>
+    <text x="20" y="254" fill="#A7B0BE" font-family="monospace" font-size="11">• Distance Formula: d = (t × 0.0343) / 2</text>
+    <text x="20" y="272" fill="#00D1B2" font-family="monospace" font-size="11">• Serial Data Stream (Angle, Distance)</text>
+  </g>
+
+  <!-- Right: Radar Visual Screen Representation -->
+  <g transform="translate(560, 390)">
+    <!-- Radar Semi-Circle -->
+    <path d="M -200 0 A 200 200 0 0 1 200 0 Z" fill="url(#radarGlow)" stroke="#00D1B2" stroke-width="2"/>
+    <path d="M -150 0 A 150 150 0 0 1 150 0" fill="none" stroke="#283443" stroke-width="1" stroke-dasharray="3,3"/>
+    <path d="M -100 0 A 100 100 0 0 1 100 0" fill="none" stroke="#283443" stroke-width="1" stroke-dasharray="3,3"/>
+    <path d="M -50 0 A 50 50 0 0 1 50 0" fill="none" stroke="#283443" stroke-width="1" stroke-dasharray="3,3"/>
+
+    <!-- Angle rays -->
+    <line x1="0" y1="0" x2="-141" y2="-141" stroke="#283443" stroke-width="1"/>
+    <line x1="0" y1="0" x2="0" y2="-200" stroke="#283443" stroke-width="1"/>
+    <line x1="0" y1="0" x2="141" y2="-141" stroke="#283443" stroke-width="1"/>
+
+    <!-- Sweep Beam Indicator -->
+    <line x1="0" y1="0" x2="-90" y2="-178" stroke="#00D1B2" stroke-width="2.5"/>
+    <polygon points="0,0 -90,-178 -120,-160" fill="#00D1B2" fill-opacity="0.15"/>
+
+    <!-- Detected Objects (Blips) -->
+    <circle cx="-65" cy="-125" r="5" fill="#FF7B72"/>
+    <circle cx="-65" cy="-125" r="9" fill="none" stroke="#FF7B72" stroke-width="1" opacity="0.6"/>
+    <text x="-50" y="-130" fill="#FF7B72" font-family="monospace" font-size="10">Target: 22cm @ 63°</text>
+
+    <circle cx="85" cy="-80" r="4" fill="#FFD166"/>
+    <text x="95" y="-80" fill="#FFD166" font-family="monospace" font-size="10">Target: 18cm @ 135°</text>
+
+    <!-- Radar Pivot Center -->
+    <circle cx="0" cy="0" r="6" fill="#4DA3FF"/>
+
+    <!-- Angle Text Labels -->
+    <text x="-215" y="15" fill="#A7B0BE" font-family="monospace" font-size="10">0°</text>
+    <text x="-155" y="-150" fill="#A7B0BE" font-family="monospace" font-size="10">45°</text>
+    <text x="-10" y="-210" fill="#A7B0BE" font-family="monospace" font-size="10">90°</text>
+    <text x="145" y="-150" fill="#A7B0BE" font-family="monospace" font-size="10">135°</text>
+    <text x="195" y="15" fill="#A7B0BE" font-family="monospace" font-size="10">180°</text>
+  </g>
+
+  <!-- Connective Data Arrow -->
+  <path d="M 320 220 C 370 220, 390 280, 440 310" fill="none" stroke="#00D1B2" stroke-width="2" stroke-dasharray="4,4"/>
+  <polygon points="445,313 435,307 438,317" fill="#00D1B2"/>
+  <rect x="330" y="245" width="90" height="22" rx="4" fill="#0B0F14" stroke="#283443"/>
+  <text x="375" y="260" fill="#00D1B2" font-family="monospace" font-size="9" text-anchor="middle">Data Stream</text>
+
+  <!-- Footer Tag -->
+  <text x="50" y="450" fill="#7D8590" font-family="monospace" font-size="11">ACADEMIC EMBEDDED SYSTEMS PROJECT — ABDULLAH AZB 2026</text>
+</svg>

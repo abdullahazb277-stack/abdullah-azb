@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="barrierBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1622"/>
+      <stop offset="100%" stop-color="#141E2B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" rx="16" fill="url(#barrierBg)" stroke="#283443" stroke-width="2"/>
+
+  <!-- Header -->
+  <text x="50" y="42" fill="#00D1B2" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">AUTOMATION &amp; INFRASTRUCTURE LOGIC</text>
+  <text x="50" y="70" fill="#F5F7FA" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700">Smart Parking Barrier Control System</text>
+  <text x="50" y="92" fill="#A7B0BE" font-family="system-ui, -apple-system, sans-serif" font-size="13">Automated Vehicle Presence Sensing, Actuation Servo Interlock, and Access-State Feedback</text>
+
+  <!-- Left: Sequence Flow & Architecture -->
+  <g transform="translate(50, 125)">
+    <!-- Stage 1 -->
+    <rect width="250" height="70" rx="8" fill="#151E29" stroke="#00D1B2" stroke-width="1.5"/>
+    <text x="18" y="26" fill="#00D1B2" font-family="system-ui, sans-serif" font-size="12" font-weight="700">1. VEHICLE DETECTION</text>
+    <text x="18" y="46" fill="#F5F7FA" font-family="system-ui, sans-serif" font-size="12">Ultrasonic / IR Proximity Sensor</text>
+    <text x="18" y="60" fill="#A7B0BE" font-family="monospace" font-size="10">Threshold: Distance &lt; Preset Limit</text>
+
+    <!-- Arrow Down -->
+    <line x1="125" y1="70" x2="125" y2="90" stroke="#00D1B2" stroke-width="2"/>
+    <polygon points="125,93 120,85 130,85" fill="#00D1B2"/>
+
+    <!-- Stage 2 -->
+    <rect y="95" width="250" height="70" rx="8" fill="#151E29" stroke="#4DA3FF" stroke-width="1.5"/>
+    <text x="18" y="121" fill="#4DA3FF" font-family="system-ui, sans-serif" font-size="12" font-weight="700">2. CONTROLLER LOGIC</text>
+    <text x="18" y="141" fill="#F5F7FA" font-family="system-ui, sans-serif" font-size="12">Microcontroller State Machine</text>
+    <text x="18" y="155" fill="#A7B0BE" font-family="monospace" font-size="10">Safety Check &amp; Debounce Timer</text>
+
+    <!-- Arrow Down -->
+    <line x1="125" y1="165" x2="125" y2="185" stroke="#4DA3FF" stroke-width="2"/>
+    <polygon points="125,188 120,180 130,180" fill="#4DA3FF"/>
+
+    <!-- Stage 3 -->
+    <rect y="190" width="250" height="75" rx="8" fill="#151E29" stroke="#00D1B2" stroke-width="1.5"/>
+    <text x="18" y="216" fill="#00D1B2" font-family="system-ui, sans-serif" font-size="12" font-weight="700">3. SERVO MOTOR ACTUATION</text>
+    <text x="18" y="236" fill="#F5F7FA" font-family="system-ui, sans-serif" font-size="12">Barrier Gate Angular Movement (0° to 90°)</text>
+    <text x="18" y="252" fill="#A7B0BE" font-family="monospace" font-size="10">Auto-Close Delay on Vehicle Clearance</text>
+  </g>
+
+  <!-- Right: Physical Barrier Concept Diagram -->
+  <g transform="translate(360, 130)">
+    <!-- Ground road -->
+    <line x1="20" y1="260" x2="380" y2="260" stroke="#283443" stroke-width="3"/>
+    
+    <!-- Barrier Stanchion Post -->
+    <rect x="70" y="140" width="46" height="120" rx="6" fill="#1B2636" stroke="#4DA3FF" stroke-width="2"/>
+    <circle cx="93" cy="165" r="12" fill="#111821" stroke="#00D1B2" stroke-width="2"/>
+    <!-- Status LED -->
+    <circle cx="93" cy="195" r="5" fill="#00D1B2"/>
+    <text x="125" y="198" fill="#00D1B2" font-family="monospace" font-size="10">OPEN / GREEN</text>
+    <circle cx="93" cy="215" r="5" fill="#FF7B72" opacity="0.4"/>
+
+    <!-- Barrier Arm (Raised position angled at 45°/90°) -->
+    <g transform="translate(93, 165) rotate(-60)">
+      <rect x="0" y="-8" width="220" height="16" rx="4" fill="#E2E8F0" stroke="#151E29"/>
+      <!-- Red stripes -->
+      <polygon points="40,-8 55,-8 35,8 20,8" fill="#FF4D4D"/>
+      <polygon points="90,-8 105,-8 85,8 70,8" fill="#FF4D4D"/>
+      <polygon points="140,-8 155,-8 135,8 120,8" fill="#FF4D4D"/>
+      <polygon points="190,-8 205,-8 185,8 170,8" fill="#FF4D4D"/>
+    </g>
+
+    <!-- Vehicle Outline Concept -->
+    <g transform="translate(200, 195)">
+      <path d="M 10 40 L 40 40 L 55 15 L 115 15 L 135 40 L 160 40 L 160 55 L 10 55 Z" fill="#1A283B" stroke="#4DA3FF" stroke-width="1.5"/>
+      <circle cx="45" cy="55" r="10" fill="#111821" stroke="#283443" stroke-width="2"/>
+      <circle cx="130" cy="55" r="10" fill="#111821" stroke="#283443" stroke-width="2"/>
+      <text x="45" y="32" fill="#A7B0BE" font-family="system-ui" font-size="10">Detected Vehicle</text>
+    </g>
+
+    <!-- Ultrasonic Sensing Beam Waves -->
+    <path d="M 60 215 Q 110 200 160 215" fill="none" stroke="#00D1B2" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <path d="M 70 225 Q 110 215 150 225" fill="none" stroke="#00D1B2" stroke-width="1.5" stroke-dasharray="3,3"/>
+  </g>
+
+  <!-- Footer Tag -->
+  <text x="50" y="450" fill="#7D8590" font-family="monospace" font-size="11">ACADEMIC AUTOMATION &amp; INFRASTRUCTURE CONCEPT — ABDULLAH AZB 2026</text>
+</svg>
